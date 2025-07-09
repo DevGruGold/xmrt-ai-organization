@@ -142,3 +142,4 @@ vite.config.ts.timestamp-*
 frontend/package-lock.json
 
 
+test/
