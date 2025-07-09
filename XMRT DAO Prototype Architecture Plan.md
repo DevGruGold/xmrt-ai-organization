@@ -23,7 +23,7 @@ The interactions between these components will be orchestrated to ensure seamles
 *   **Frontend to Backend:** The frontend will communicate with the backend services via RESTful APIs or GraphQL. These requests will handle user authentication, data retrieval, and triggering backend processes.
 *   **Backend to Eliza AI Agents:** The backend will serve as an intermediary for Eliza AI agents. It will provide the necessary data for the agents to operate, receive their outputs (e.g., decisions, proposals), and facilitate their communication with the blockchain or other external services. This interaction will likely involve a message queue or an event-driven architecture to handle asynchronous communication.
 *   **Eliza AI Agents to Blockchain Integration Module:** Eliza AI agents, when making decisions that require on-chain actions (e.g., executing a proposal, transferring tokens), will communicate with the Blockchain Integration Module. This module will then interact with the Sepolia Testnet smart contracts.
-*   **Blockchain Integration Module to Sepolia Testnet:** This module will be responsible for sending transactions to the Sepolia Testnet, querying token balances, and listening for relevant smart contract events. It will interact with the `0x77307dfbc436224d5e6f2048d2b6bdfa66998a15` XMRT token contract.
+*   **Blockchain Integration Module to Sepolia Testnet:** This module will be responsible for sending transactions to the Sepolia Testnet, querying token balances, and listening for relevant smart contract events. It will interact with the `0x77307DFbc436224d5e6f2048d2b6bDfA66998a15` XMRT token contract.
 *   **Backend/Eliza AI Agents to IPFS/Decentralized Storage:** Important DAO data, such as proposals, voting records, and potentially Eliza AI agent knowledge bases or audit trails, will be stored on IPFS or a similar decentralized storage solution to ensure immutability and transparency. The backend or Eliza agents will handle the uploading and retrieval of this data.
 
 
@@ -31,7 +31,7 @@ The interactions between these components will be orchestrated to ensure seamles
 
 ## 3. Sepolia Testnet Token Integration
 
-The XMRT token on the Sepolia Testnet (`0x77307dfbc436224d5e6f2048d2b6bdfa66998a15`) will be central to the DAO's operations. The integration will involve:
+The XMRT token on the Sepolia Testnet (`0x77307DFbc436224d5e6f2048d2b6bDfA66998a15`) will be central to the DAO's operations. The integration will involve:
 
 *   **Token Balance and Transfer:** The Blockchain Integration Module will provide functionalities to check user and DAO contract token balances and facilitate token transfers as per DAO decisions.
 *   **Smart Contract Interaction:** The DAO will likely have a governance smart contract deployed on Sepolia that manages proposals, voting, and execution of approved actions. The Blockchain Integration Module will interact with this contract to submit proposals, cast votes, and trigger execution functions.

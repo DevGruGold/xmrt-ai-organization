@@ -58,7 +58,7 @@ class ElizaAgent:
                 "Autonomous execution"
             ],
             "xmrt_token": {
-                "contract_address": "0x77307dfbc436224d5e6f2048d2b6bdfa66998a15",
+                "contract_address": "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15",
                 "network": "Sepolia Testnet",
                 "total_supply": "1,000,000 XMRT",
                 "governance_rights": True

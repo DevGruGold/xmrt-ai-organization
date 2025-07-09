@@ -71,7 +71,7 @@ FLASK_ENV=development
 SECRET_KEY=your-secret-key-here
 DATABASE_URL=sqlite:///database/app.db
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
-XMRT_CONTRACT_ADDRESS=0x77307dfbc436224d5e6f2048d2b6bdfa66998a15
+XMRT_CONTRACT_ADDRESS=0x77307DFbc436224d5e6f2048d2b6bDfA66998a15
 ```
 
 ### Wallet Configuration
@@ -85,7 +85,7 @@ XMRT_CONTRACT_ADDRESS=0x77307dfbc436224d5e6f2048d2b6bdfa66998a15
    - Block Explorer: https://sepolia.etherscan.io
 
 3. Add XMRT token to wallet:
-   - Contract Address: `0x77307dfbc436224d5e6f2048d2b6bdfa66998a15`
+   - Contract Address: `0x77307DFbc436224d5e6f2048d2b6bDfA66998a15`
    - Symbol: XMRT
    - Decimals: 18
 

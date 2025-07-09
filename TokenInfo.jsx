@@ -17,7 +17,7 @@ import {
 const TokenInfo = () => {
   const [copied, setCopied] = useState(false)
   
-  const tokenAddress = '0x77307dfbc436224d5e6f2048d2b6bdfa66998a15'
+  const tokenAddress = '0x77307DFbc436224d5e6f2048d2b6bDfA66998a15'
   
   const copyToClipboard = () => {
     navigator.clipboard.writeText(tokenAddress)

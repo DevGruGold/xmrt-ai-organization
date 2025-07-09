@@ -16,7 +16,7 @@ import hashlib
 @dataclass
 class TokenInfo:
     """XMRT Token information"""
-    contract_address: str = "0x77307dfbc436224d5e6f2048d2b6bdfa66998a15"
+    contract_address: str = "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15"
     network: str = "Sepolia Testnet"
     symbol: str = "XMRT"
     decimals: int = 18
@@ -136,9 +136,9 @@ class BlockchainService:
         """Get XMRT token balance for an address"""
         # Mock implementation - in production, this would call the actual contract
         mock_balances = {
-            "0x1234567890123456789012345678901234567890": "15000",
-            "0x2345678901234567890123456789012345678901": "8500",
-            "0x3456789012345678901234567890123456789012": "22000"
+            "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15": "15000",
+            "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15": "8500",
+            "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15": "22000"
         }
         
         balance = mock_balances.get(address, "0")
@@ -154,12 +154,12 @@ class BlockchainService:
         """Get staking information for an address"""
         # Mock staking data
         mock_staking = {
-            "0x1234567890123456789012345678901234567890": {
+            "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15": {
                 "staked_amount": "5000",
                 "rewards_earned": "125",
                 "staking_duration": "45 days"
             },
-            "0x2345678901234567890123456789012345678901": {
+            "0x77307DFbc436224d5e6f2048d2b6bDfA66998a15": {
                 "staked_amount": "3000",
                 "rewards_earned": "75",
                 "staking_duration": "30 days"

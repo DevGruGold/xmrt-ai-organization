@@ -32,7 +32,7 @@ The application is live and fully functional, featuring:
 
 ### ✅ Comprehensive Blockchain Integration
 - Full XMRT token integration on Sepolia Testnet
-- Contract address: `0x77307dfbc436224d5e6f2048d2b6bdfa66998a15`
+- Contract address: `0x77307DFbc436224d5e6f2048d2b6bDfA66998a15`
 - Wallet connectivity and token management
 - On-chain governance voting and staking mechanisms
 - Transaction monitoring and status tracking
@@ -82,7 +82,7 @@ The application is live and fully functional, featuring:
 
 ### Blockchain Integration
 - **Network**: Sepolia Testnet
-- **Token**: XMRT (0x77307dfbc436224d5e6f2048d2b6bdfa66998a15)
+- **Token**: XMRT (0x77307DFbc436224d5e6f2048d2b6bDfA66998a15)
 - **Operations**: Staking, voting, transfers, balance queries
 - **Proofs**: Zero-knowledge proof generation and verification
 - **Monitoring**: Transaction tracking and status updates

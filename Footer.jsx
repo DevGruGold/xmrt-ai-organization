@@ -81,7 +81,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="https://sepolia.etherscan.io/token/0x77307dfbc436224d5e6f2048d2b6bdfa66998a15" 
+                  href="https://sepolia.etherscan.io/token/0x77307DFbc436224d5e6f2048d2b6bDfA66998a15" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-blue-400 transition-colors text-sm flex items-center"
