@@ -1,3 +1,6 @@
+import { GoogleGenerativeAI } from '@google/generative-ai';
+import { config } from '../config';
+
 export interface XMRTElizaAgent {
   id: string;
   name: string;
@@ -6,6 +9,20 @@ export interface XMRTElizaAgent {
   capabilities: string[];
   status: 'active' | 'inactive' | 'maintenance';
 }
+
+const genAI = new GoogleGenerativeAI(config.ai.googleApiKey);
+
+const getAIResponse = async (prompt: string, agentRole: string) => {
+  try {
+    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const result = await model.generateContent(`As the ${agentRole} for the XMRT Fully Automated AI Organization, respond to the following: ${prompt}`);
+    const response = await result.response;
+    return response.text();
+  } catch (error) {
+    console.error(`Error getting AI response for ${agentRole}:`, error);
+    return `I am currently experiencing technical difficulties. Please try again later.`;
+  }
+};
 
 export const createExecutiveAgent = () => ({
   name: "XMRT Executive AI",
@@ -53,7 +70,8 @@ Always maintain transparency in decision-making and provide clear explanations f
     "Direct smart contract interaction",
     "Monero mining optimization",
     "DeFi protocol management"
-  ]
+  ],
+  getAIResponse: (prompt: string) => getAIResponse(prompt, "Executive AI Agent")
 });
 
 export const createOperationsAgent = () => ({
@@ -85,7 +103,8 @@ You work closely with the Executive AI and other specialized agents to ensure th
     "Proactive quality assurance and error detection",
     "Full automation implementation and maintenance",
     "Seamless cross-functional coordination and communication"
-  ]
+  ],
+  getAIResponse: (prompt: string) => getAIResponse(prompt, "Operations AI Agent")
 });
 
 export const createFinancialAgent = () => ({
@@ -117,7 +136,8 @@ You integrate directly with XMRT ecosystem financial services including XMART to
     "Continuous financial reporting and transparency",
     "Automated compliance monitoring and regulatory adherence",
     "Self-optimizing cost optimization and budget management"
-  ]
+  ],
+  getAIResponse: (prompt: string) => getAIResponse(prompt, "Financial AI Agent")
 });
 
 export const xmrtAgents: XMRTElizaAgent[] = [
