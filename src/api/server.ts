@@ -164,6 +164,12 @@ export class XMRTAPIServer {
     this.app.get('*', (req, res) => {
       res.sendFile('index.html', { root: 'public' });
     });
+
+    // Centralized error handling middleware
+    this.app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+      console.error(`Unhandled API Error: ${err.message}`, err.stack);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
   }
 
   private setupWebSocket(): void {
@@ -274,4 +280,5 @@ export class XMRTAPIServer {
 }
 
 export default XMRTAPIServer;
+
 
